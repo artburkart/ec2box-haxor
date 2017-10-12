@@ -1,0 +1,9 @@
+{
+  "name": "ec2box-haxor",
+  "version": "1.0.0",
+  "description": "Chrome Extension for search ec2box",
+  "main": "index.js",
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}

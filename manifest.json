@@ -1,0 +1,25 @@
+{
+  "name": "EC2Box Haxor",
+  "version": "1.0.5",
+  "description": "Attempts to highlight tickets based on their card color in a certain proprietary issue tracking software.",
+  "homepage_url": "https://github.com/artburkart/ec2box-haxor",
+  "manifest_version": 2,
+  "permissions": ["tabs", "https://ec2box.tools.simplisafe.com/admin/viewSystems.action*"],
+  "icons": {
+    "128": "icon128.png"
+  },
+  "browser_action": {
+        "default_icon": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_idle",
+      "matches": ["https://ec2box.tools.simplisafe.com/admin/viewSystems.action*"],
+      "js": ["node_modules/jquery/dist/jquery.js", "ec2box-haxor.js"]
+    }
+  ],
+  "background": {
+    "persistent": false,
+     "scripts": ["node_modules/jquery/dist/jquery.js", "ec2box-haxor.js"]
+  }
+}
