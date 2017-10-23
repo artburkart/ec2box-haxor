@@ -1,9 +1,10 @@
 // Disable form
 const form = $('#viewSystems');
 form.attr('action', '');
-form.submit(function () {
-  return false;
-});
+form.submit(() => false);
+// form.submit(function () {
+//   return false;
+// });
 
 // Find input
 const el = $('input[tabindex=2]');
@@ -39,7 +40,9 @@ $(newEl).keypress(function (e) {
 
   // Remove the ones we're not
   $("input:checkbox:not(:checked)").each(function (idx, el) {
-    $(el).closest('tr').hide();
+    if ($(el).attr('name') != 'systemSelectAll') {
+      $(el).closest('tr').hide();
+    }
   });
 });
 
