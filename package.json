@@ -4,6 +4,6 @@
   "description": "Chrome Extension for search ec2box",
   "main": "index.js",
   "dependencies": {
-    "jquery": "^3.4.0"
+    "jquery": "^3.5.0"
   }
 }
